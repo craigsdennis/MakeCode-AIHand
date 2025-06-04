@@ -159,6 +159,7 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 2, 50, 300)
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 3, 50, 300)
         }
+        // Wave
         if (action == 12) {
             bluetooth.uartWriteString("CMD|15|12|$")
             for (let index = 0; index < 3; index++) {
@@ -192,6 +193,7 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
                 StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 6, 80, 300)
             }
         }
+        // Fist
         if (action == 13) {
             bluetooth.uartWriteString("CMD|15|13|$")
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 1, 150, 200)
@@ -233,7 +235,6 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 6, 70, 300)
             basic.pause(300)
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 6, 90, 300)
-
         }
         if (action == 16) {
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 1, 150, 300)
@@ -242,6 +243,32 @@ bluetooth.onUartDataReceived(serial.delimiters(Delimiters.Dollar), function () {
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 4, 50, 300)
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 5, 50, 300)
             StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 6, 90, 300)
+        }
+        // Rockout
+        if (action == 17) {
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 1, 50, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 2, 150, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 3, 50, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 4, 50, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 5, 150, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 6, 180, 300)
+            basic.pause(300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 6, 30, 300)
+            basic.pause(300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 6, 180, 300)
+        }
+        // Relaxed
+        if (action == 18) {
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 1, 130, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 2, 130, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 3, 130, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 4, 130, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 5, 130, 300)
+            StartbitV2.setPwmServo(StartbitV2.startbit_servorange.range1, 6, 180, 300)
+        }
+        // Ambient
+        if (action == 19) {
+
         }
     }
 })
